@@ -299,11 +299,16 @@ namespace Raspberry.IO.InterIntegratedCircuit
         {
             switch (processor)
             {
+                case Processor.Bcm3835:
                 case Processor.Bcm2708:
                     return Interop.BCM2835_BSC1_BASE;
 
+                case Processor.Bcm3836:
+                case Processor.Bcm3837:
                 case Processor.Bcm2709:
+                case Processor.Bcm2710:
                     return Interop.BCM2836_BSC1_BASE;
+                    
                 case Processor.Bcm2711:
                     return Interop.BCM2711_BSC1_BASE;
 
@@ -316,11 +321,16 @@ namespace Raspberry.IO.InterIntegratedCircuit
         {
             switch (processor)
             {
+                case Processor.Bcm3835:
                 case Processor.Bcm2708:
                     return Interop.BCM2835_GPIO_BASE;
 
+                case Processor.Bcm3836:
+                case Processor.Bcm3837:
                 case Processor.Bcm2709:
+                case Processor.Bcm2710:
                     return Interop.BCM2836_GPIO_BASE;
+                    
                 case Processor.Bcm2711:
                     return Interop.BCM2711_GPIO_BASE;
 
